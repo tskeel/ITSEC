@@ -49,3 +49,10 @@ awk -F ' ' '{print $1}' Macs.txt > MacsNamesOnly.txt
 --open only show open ports
 -iL use a target list
 ```
+
+## Metasploit
+
+### Install Metasploit
+````
+curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && chmod 755 msfinstall && ./msfinstall
+````
