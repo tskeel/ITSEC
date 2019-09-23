@@ -21,4 +21,10 @@ foreach ($Server in $ServerName) {
 }
 ```
 
-Next
+Print/Split Certain Columns, Space delimited -F ' ' / Column 1 $1  
+
+```
+awk -F ' ' '{print $1}' Macs.txt > MacsNamesOnly.txt
+```
+
+
