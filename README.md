@@ -40,3 +40,11 @@ ForEach ($Server in $Servername) {
 ```
 awk -F ' ' '{print $1}' Macs.txt > MacsNamesOnly.txt
 ```
+
+## Nmap
+
+### Useful Switches 
+```
+-p- all ports
+--open only show open ports
+```
