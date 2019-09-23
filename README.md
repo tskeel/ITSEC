@@ -47,4 +47,5 @@ awk -F ' ' '{print $1}' Macs.txt > MacsNamesOnly.txt
 ```
 -p- all ports
 --open only show open ports
+-iL use a target list
 ```
