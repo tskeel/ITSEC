@@ -3,7 +3,7 @@ ITSEC Notes
 
 Powershell Ping a List of Computers, from Computers.txt
 
-$ServerName = Get-Content "c:\Computers.txt"  
+```$ServerName = Get-Content "c:\Computers.txt"  
   
 foreach ($Server in $ServerName) {  
   
@@ -17,4 +17,4 @@ foreach ($Server in $ServerName) {
               
                     }      
           
-} 
+}```
