@@ -1,8 +1,8 @@
-**ITSEC Notes
+# **ITSEC Notes**
 
-Powershell
+## Powershell
 
-Ping a List of Computers, from Computers.txt
+### Ping a List of Computers
 
 ```
 $ServerName = Get-Content "c:\Computers.txt"  
@@ -22,7 +22,7 @@ foreach ($Server in $ServerName) {
 }
 ```
 
-Get IPv4 Address from a List
+### Get IPv4 Address from a List
 ```
 $Servername = Get-Content "C:\Computers.txt" 
 
@@ -33,12 +33,10 @@ ForEach ($Server in $Servername) {
  }
  ```
 
-Unix Commands
+## Unix Commands
 
-Print/Split Certain Columns, Space delimited -F ' ' / Column 1 $1  
+### Print/Split Certain Columns, Space delimited -F ' ' / Column 1 $1  
 
 ```
 awk -F ' ' '{print $1}' Macs.txt > MacsNamesOnly.txt
 ```
-
-
