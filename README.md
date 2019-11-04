@@ -61,3 +61,10 @@ curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/t
 ```
 python GetUserSPNs.py -debug -request -outputfile kerberoasting.txt -dc-ip 1.1.1.1 -target-domain domain.local domain/user:password
 ```
+
+## Shodan
+### Useful Searches
+```
+org:"companyname"
+net:"1.1.1.0/24"
+```
