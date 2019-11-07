@@ -53,7 +53,12 @@ split -l 100 full part --numeric-suffixes=1
 -p- all ports
 --open only show open ports
 -iL use a target list
+
+Convert xml output to html files
+&& xsltproc part1.xml -o part1.html 
+
 ```
+
 
 ## Metasploit
 
