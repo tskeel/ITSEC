@@ -41,6 +41,11 @@ ForEach ($Server in $Servername) {
 awk -F ' ' '{print $1}' Macs.txt > MacsNamesOnly.txt
 ```
 
+### Split a file n (100) number of lines into part1/2/etc
+```
+split -l 100 full part --numeric-suffixes=1
+```
+
 ## Nmap
 
 ### Useful Switches 
