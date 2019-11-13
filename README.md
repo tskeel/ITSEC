@@ -46,6 +46,17 @@ awk -F ' ' '{print $1}' Macs.txt > MacsNamesOnly.txt
 split -l 100 full part --numeric-suffixes=1
 ```
 
+### Reformat usermames first.last@domain.com to last + first letter
+```
+while read LINE in; do
+        EMAIL=`echo $LINE | awk -F\@ '{print $1}'`
+        NAME=`echo $EMAIL | awk -F\. '{print $NF}'`
+        CHAR1=`echo $LINE | cut -c1`
+        echo ${NAME}${CHAR1}
+done < emails.lst
+```
+
+
 ## Nmap
 
 ### Useful Switches 
