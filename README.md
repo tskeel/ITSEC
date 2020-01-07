@@ -56,6 +56,10 @@ while read LINE in; do
 done < emails.lst
 ```
 
+### Get Ips from a file
+```
+egrep -o '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' list | sort | uniq > ips
+```
 
 ## Nmap
 
