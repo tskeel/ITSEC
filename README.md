@@ -7,6 +7,8 @@ https://github.com/cddmp/enum4linux-ng
 
 https://github.com/0xsp-SRD/mortar
 
+https://github.com/danielbohannon/Invoke-Obfuscation
+
 
 ## Powershell
 
