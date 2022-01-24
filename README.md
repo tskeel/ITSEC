@@ -9,6 +9,8 @@ https://github.com/0xsp-SRD/mortar
 
 https://github.com/danielbohannon/Invoke-Obfuscation
 
+https://github.com/aas-n/spraykatz
+
 
 ## Powershell
 
