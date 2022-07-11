@@ -105,3 +105,11 @@ python GetUserSPNs.py -debug -request -outputfile kerberoasting.txt -dc-ip 1.1.1
 org:"companyname"
 net:"1.1.1.0/24"
 ```
+
+## Notes
+Identify Domain Controller
+````
+nslookup  
+ type set type=all 
+ _Idap._tcp.dc_msdcs."Domain_Name" 
+ ````
