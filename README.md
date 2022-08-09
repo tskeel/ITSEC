@@ -16,6 +16,10 @@ Examples
 
 ``` responder -I eth0 -wF ``` WPAD
 
+``` --lm ``` Downgrade
+
+``` responder -wrf --lm -v -I eth0 ```
+
 ## ASREProast
 https://github.com/SecureAuthCorp/impacket/blob/master/examples/GetNPUsers.py
 
