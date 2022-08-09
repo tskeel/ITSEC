@@ -123,6 +123,6 @@ Examples
 
 ``` responder -I eth0 ```
 
-``` responder -I eth0 -A ``` Listen Only
+``` responder -I eth0 -A ``` Analyze mode
 
 ``` responder -I eth0 -wF ``` WPAD
