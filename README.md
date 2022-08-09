@@ -111,6 +111,10 @@ nslookup
 
 # Initial Access
 ## Poisoning and Spoofing (LLMNR NBT-NS)
+
+Pretender
+https://github.com/RedTeamPentesting/pretender
+
 Responder
 https://github.com/lgandx/Responder
 
