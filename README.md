@@ -113,3 +113,16 @@ nslookup
  type set type=all 
  _Idap._tcp.dc_msdcs."Domain_Name" 
  ````
+
+# Initial Access
+## Poisoning and Spoofing (LLMNR NBT-NS)
+Responder
+https://github.com/lgandx/Responder
+
+Examples
+
+``` responder -I eth0 ```
+
+``` responder -I eth0 -A ``` Listen Only
+
+``` responder -I eth0 -wF ``` WPAD
