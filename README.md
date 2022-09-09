@@ -59,6 +59,12 @@ Example Kerberoast hashcat syntax:
 
 NTLMv2 -m 5600
 
+## Recon
+```
+dir /s *password*
+findstr /s /n /i /p *password*
+```
+
 ## Tools
 https://github.com/Cerbersec/Ares
 
